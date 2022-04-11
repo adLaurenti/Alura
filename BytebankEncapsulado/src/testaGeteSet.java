@@ -2,9 +2,9 @@ import javax.swing.plaf.synth.SynthUI;
 
 public class testaGeteSet {
     public static void main(String[] args) {
-        Conta conta = new Conta();
+        Conta conta = new Conta(1337, 24222);
         //conta.numero = 1337;
-        conta.setNumero(1337);
+        //conta.setNumero(1337);
         System.out.println(conta.getNumero());
 
 //Trocando o Nome

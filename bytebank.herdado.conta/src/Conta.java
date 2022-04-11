@@ -4,7 +4,7 @@ public class Conta { //objeto Conta instanciado do class tipo Cliente
     private int numero;
     private int destino;
     private cliente titular;
-private static int total = 0;
+    private static int total = 0;
 
     //contrutor
     public Conta(int agencia, int numero) {
@@ -12,8 +12,8 @@ private static int total = 0;
         System.out.println("O total de contas é: " + Conta.total);
         this.agencia = agencia;
         this.numero = numero;
-        this.saldo = 100;
-        System.out.println("Estou criando uma conta " + this.numero);
+     //   this.saldo = 100;
+      //  System.out.println("Estou criando uma conta " + this.numero);
     }
 
 //deposita
@@ -33,8 +33,7 @@ private static int total = 0;
         }
   //transfere
     public boolean transfere(double valor, Conta destino) {
-        if (this.saldo >= valor){
-            this.saldo -= valor;
+        if (this.saca(valor)){
             destino.deposita(valor);
             return true;
         }else {
